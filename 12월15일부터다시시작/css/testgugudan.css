@@ -1,0 +1,17 @@
+div{
+display: inline-block;  /* 옆에 붙을 수 이게 알려줌 */
+padding : 0 20px 30px 20px; /* 테두리와 콘텐츠 사이 여백  상 우 하 좌*/
+ margin : 15px; /* 다른 콘텐츠 사이 여백 */
+ border: 1px solid red;
+ font-size: 35px;
+ 
+
+
+}
+div h3{
+  text-align: center;
+  font-size : 35px;
+}
+div p{
+  font-size:1px;
+}

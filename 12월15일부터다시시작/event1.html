@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바 스크립트 이벤트</title>
+  <link rel = "stylesheet" href="css/function.css">
+</head>
+<body>
+  <ul> 
+ <!---  <li><a href="#" onclick="alert('버튼을 클릭 했어용')" >Green</a> </li>
+    <li><a href="#" onblur="alert('버튼을 클릭했어유')">Red</a></li>-->
+    <!---blur = 포커스를 해지했을 때 발생하는 이벤트-->
+    <li><a href="#" onclick="alert('버튼을 클릭했어유')">Red</a></li>
+    <li><a href="#" onclick="changeBg('blue')">Blue</a></li>
+    <!-- a태그 에서 일어나는 이벤트 onclick= 클릭 하면 일어나는 이벤트를 함수로 실행 -->
+  </ul>
+  <div id ="result"></div>
+
+
+  <script>
+    function changeBg(color){
+      // html 문서내에 id result 선택
+      //  ctrl / 누르면 참조 뜸 
+      var result = document.querySelector('#result'); //result 나를 선택하겠다.
+      // querySelector(#id) => id 값 id를 가진 요소를 찾습니다.
+      // querySelector(.class) => class 값 class를 가진 요소를 찾습니다.
+      
+      // result 스타일중에 배경 색상을 color 값으로 변경
+          
+      result.style.backgroundColor = color;
+    }
+
+
+
+  </script>
+
+
+</body>
+</html>

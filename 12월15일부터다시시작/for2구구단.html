@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <style>
+      div{
+        display: inline-block;      /*여러 요소가 한줄에 입력 */
+        padding : 0 20px 30px 20px; /*위쪽 오른쪽 아래쪽 왼쪽 글자에 붙어 있는 것 */
+        margin : 15px;              /*보드 바깥족 */
+        border : 1px solid red;     /*테두리 1px 실선 빨간 */
+        line-height : 2;              /*줄 간격  */
+      }
+      div h3{
+        text-align : center; 
+        font-weight : bold;
+      }
+      
+
+    </style>
+  
+</head>
+<body>
+  <script>
+    var i,j;
+
+    for(i=1; i<=9; i++){
+      document.write("<div>") // document.write 하고 적는 값은 전부 필드에 적는 값
+      document.write("<h3>"  + i + "단 </h3>" ); // 글자 " " 이거 했는지 잘 확인 해라 
+      for(j=1; j<=9; j++){
+        document.write(i * j);
+      }
+       
+      
+      document.write("</div>");
+
+     
+    }
+
+
+  </script>
+
+  
+</body>
+</html>

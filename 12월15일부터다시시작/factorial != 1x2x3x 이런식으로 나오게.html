@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+body {
+			padding-top:20px;
+			text-align:center;
+		}
+</style>
+
+<body>
+  <script>
+    var n =  prompt("숫자 입력 하세요");
+    var msg = "";
+
+    if (n !== null){  //취소 버튼을 누르지 않았다면
+      var nFact = 1;  //결과값
+      var i = 1;
+
+      while(i <= n){
+        
+        nFact *= i;
+        
+        msg =msg + i;
+        if(i!=n) {
+          msg =msg + "x "  ; 
+        }
+        i++;
+        //문자열 출력을 미리 올려 주면 됨.
+      }          
+     
+      
+    } else { 
+      msg = "값을 입력하지 않았습니다."
+    }
+    msg = n + "!= " +  msg + " = " + nFact; 
+    document.write(msg);
+    
+
+
+  </script>
+  
+</body>
+</html>

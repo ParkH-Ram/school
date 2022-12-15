@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <style>
+    p{
+      border: 1px solid red;
+      width : 300px;
+      height : 300px;
+      font-weight: bold;
+      text-align: center;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+  </style>
+
+<body>
+  <script>
+    var i,       
+           
+    isum = 0,     //홀수합
+    jsum = 0;      //짝수합
+
+    for(i=1; i<=100; i++){
+      if(i % 2 === 0){
+         jsum = jsum+i ;
+        
+      } else {
+        isum = isum+i;
+      }
+
+    }
+   // alert(<p>"홀수합은 " + isum</p>); 
+   // alert("짝수합은 " + jsum); 
+   // alert("전체합은 " + (isum+jsum));
+
+   document.write("<p>홀수합은 " + isum+"-3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3--3-</p>");
+   document.write("<p>짝수합은 " + jsum+"</p>");
+   document.write("전체합은 " + (isum+jsum));
+
+  </script>
+  
+</body>
+</html>

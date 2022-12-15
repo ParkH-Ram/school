@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자리 배치도</title>
+</head>
+<body>
+  <h1>자리 배치도</h1>
+  <script>
+    let memNum = parseInt(prompt("입장객은 몇명?")); // 전체 입장객
+    let colNum = parseInt(prompt("한줄에 몇명?")); // 한줄에 앉을 입장객
+    let rowNum;
+
+    if(memNum % colNum === 0)
+      rowNum = parseInt(memNum / colNum);
+     else 
+      rowNum = parseInt(memNum / colNum) +1 ;
+
+    document.write("모두" + rowNum + "개의 줄이 필요 합니다.");
+
+
+
+
+  </script>
+
+</body>
+</html>

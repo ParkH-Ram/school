@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>if2</title>
+</head>
+<body>
+  <script>
+    var userNumber = prompt("숫자를 입력 하세요");
+
+    if(typeof(userNumber)=="number"){      // 유저 넘버가 null이 아니라면
+      // typeof를 넣어 줘야 숫자로 인식
+      //null 값이 아예 입력 안 되면
+      
+      if (userNumber % 3 ==0){
+        alert("3의 배수 입니다."+userNumber);
+        document.write(userNumber);
+      } else {
+        alert("3의 배수가 아닙니다.");
+      }
+    } else {
+        alert("입력이 취소 됐스예");
+      }
+
+
+  </script>
+  
+</body>
+</html>

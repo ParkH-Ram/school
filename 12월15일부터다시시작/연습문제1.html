@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> 성적 배치도 </h1>
+
+    <script>
+      var gkrwja = parseInt(prompt("학점을 입력하세요 (1~100점)"))/10;
+      switch(parseInt(gkrwja)){
+        //소수점을 없애 줘야 9 되니까 인식이 됨.
+        // 9.2를 Int로 받아야 9
+        case 9 : case 10 :alert("학점은 A입니다")
+         break;
+        case 8 : alert("학점은 B입니다")
+         break;
+        case 7 : alert("학점은 C입니다")
+         break;
+        case 6 : alert("학점은 D입니다")
+         break;
+        default : alert("학점은 F입니다")
+         break;
+      
+
+      }
+
+
+
+    </script>
+</body>
+</html>
