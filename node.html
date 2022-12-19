@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Programming</title>
+	<link rel="stylesheet" href="css/nodelist.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <button onclick="newRegister(); return false;">추가</button>
+      <!-- 버튼의 역할이 함수만 실행하는 역할이기 때문에 
+      onclick 이후에 return false 넣어 줘야 함
+      return false  = 원래 있던 기능을 취소 시키기 위한 -->
+    </form>
+    <hr>  
+    <ul id="itemList"></ul>  
+  </div>
+
+  <script>
+    function newRegister(){
+      var newItem = document.createElement("li");
+      var subject = document.querySelector("#subject");
+      var newText = document.createTextNode(subject.value);
+
+      newItem.appendChild(newText) ;
+      document.querySelector("#itemList").appendChild(newItem);    
+
+      subject.value = "";
+
+      var items = document.querySelectorAll("li");  
+        //아이템 = 셀렉트 올로 선택
+        for(let i=0; i<items.length; i++){
+          items[i].addEventListener("click", function(){
+          // 이벤트 감시 클릭이 되면 함수를 실행하라
+            if(this.parentNode){
+              this.parentNode.removeChild(this);
+            }
+          });
+        }
+    }
+  
+  </script>
+</body>
+</html>

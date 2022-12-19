@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM event 객체</title>
+  <style>
+    #container {
+      width:300px;
+      margin:10px auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img src="images/cup-1.png" id="cup">		
+  </div>
+
+	<script>
+    var cup = document.querySelector("#cup");
+
+
+    var cup = document.querySelector("#cup");
+      cup.addEventListener("mouseover", changePic); // 마우스 커서를 위치
+      cup.addEventListener("mouseout", originPic);  // 마우스 커서를 밖으로 
+      //addEventListener("실행 동작",  함수명)
+      //함수가 지정 되어 있을 때 함수를 호출 
+  
+    
+   //this.src = 현재 파일 위치 
+
+      function changePic(){
+        cup.src = "images/cup-2.png";
+      }
+      function originPic(){
+        cup.src ="images/cup-1.png";
+    
+      } 
+      
+
+    
+    // var cup = document.querySelector("#cup");
+    // cup.onmouseout = change2;
+
+    // cup.onmouseover = changePic;
+      // function changePic(){
+      //   cup.src = "images/cup-2.png";
+      // }
+      // function change2(){
+      //   cup.src ="images/cup-1.png";
+        
+      // }
+      
+
+ 
+    
+  </script>
+</body>
+</html>`

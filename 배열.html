@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+	<script>
+    var str;
+    var arr =new Array();
+    //구구단 배열에 넣어주기 (n단 -> arr[n-1]단)
+
+		for(i = 1; i <= 9; i++){
+			arr[i -1] = "<div>"
+			  arr[i-1] += "<h3>" + i + "단</h3>"
+			for(j = 1; j <=9; j++){
+				arr[i-1] += i + " X " + j + " = " + i*j + "<br>";
+        arr[i-1] += "</div>";
+			}
+		
+      //table 만들기
+      str ="<table>"
+      for(i = 0; i<9; i++){
+        str += "<tr><td id = 'dan" + i + "'</td></tr>";
+        str += "</table>"
+      } 
+		}
+</script>
+</body>
+</html>
