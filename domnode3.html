@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+  <style>
+    #container{
+      width:500px;
+      margin:10px auto;
+      padding:20px;
+    }
+    #info {
+      margin-top:20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">    
+    <h1>DOM을 공부합시다</h1>
+    <a href="#" onclick="addContents(); this.onclick='';">더 보기</a>    
+    <div id="info"></div>
+  </div>
+  <script>
+    function addContents() {
+      var newP = document.createElement("p");
+      var txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말입니다.");
+      newP.appendChild(txtNode);
+
+      var newImg = document.createElement("img");        // 이미지 태그 지정 이름으로 지정
+      var srcNode = document.createAttribute("src");     //src 속성 생성
+      var altNode = document.createAttribute("alt");     //alt 속성 생성
+      srcNode.value = "images/dom.jpg";                  //src 속성 내용 추가
+      altNode.value = "돔 트리 예제 이미지";             //alt 속성 내용 추가
+      newImg.setAttributeNode(srcNode);                      // img 태그 안에 속성 src 넣기
+      newImg.setAttributeNode(altNode);                      // img 태그 안에 속성 alt 넣기
+
+
+      document.getElementById("info").appendChild(newImg);
+      document.getElementById("info").appendChild(newP);
+
+    }
+  </script>
+</body>
+</html>

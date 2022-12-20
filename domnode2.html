@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+  <style>
+    #container{
+      width:500px;
+      margin:10px auto;
+      padding:20px;
+    }
+    #info {
+      margin-top:20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">    
+    <h1>DOM을 공부합시다</h1>
+    <a href="#" onclick="addP(); this.onclick='';">더 보기</a> 
+     <!-- this.onclick=''; 한번만 실행 -->
+    <a href="#" onclick="addButton()">수 추가</a>   
+    
+    <div id="info"></div>
+    <div id="nd"></div>
+  </div>
+  <script>
+    var i = 0;
+
+    function addP() {      // p단락을 추가 ( addP) 해주는 함수
+      var newP = document.createElement("p");
+      var textNode = document.createTextNode("DOM은 document object model의 준말입니다.");  // 자식 부모와 자식간의 연결
+      newP.appendChild(textNode);   //텍스트 노드를 newP의 자식요소로 추가  
+      document.getElementById("info").appendChild(newP);      
+        //P를 자식 요소로 div 안에 추가  info가 div의 아이디
+    } 
+    
+      function addButton(){
+        var newButton = document.createElement("p") // p노드 추가 혼자 생성 ( <p></p>) 
+        i++;
+        var tn = document.createTextNode(i); // 텍스트 노드에 i가 들어가있다고요 ?
+
+        newButton.appendChild(tn)//뉴버튼의 자식으로 tn을 추가한다.
+
+        document.getElementById("nd").appendChild(newButton)
+
+      }
+
+  </script>
+</body>
+</html>

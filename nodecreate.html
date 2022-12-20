@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Programming</title>
+	<link rel="stylesheet" href="css/nodelist.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <button onclick="newAdd(); return false; ">추가</button>  
+      <!-- 데이터 보내는 기능을 끄는게 return false    //
+         button에 return false; 폼안에 전송 기능 끄기 ( 이벤트 기능만 처리 )
+        return false를 추가하지 않으면 클릭 누른 뒤  리스트가 사라짐-->
+    </form>
+    <hr>  
+    <ul id="itemList"></ul>  
+  </div>
+
+  <script>
+    function newAdd(){
+      
+        var newTem = document.createElement("li")                   //ul아래에 들어갈 li태그 생성
+        var subject = document.querySelector("#subject");           //text 상자를 지정
+        var newWord = document.createTextNode(subject.value);       // 텍스트 입력 : text상자안에 내용 
+
+        newTem.appendChild(newWord);           //템의 자식으로 워드 등록 (li와 텍스트 내용을 연결)
+
+        document.querySelector("#itemList").appendChild(newTem);   // 아이템리시트의 자식으로 템 등록 ( ul아래에 li 요소를 연결)
+
+
+
+        subject.value = "";                 //입력 후 값이 지워지게 설정 ( 텍스트 상자 내용을 초기화)
+
+    }
+  
+  </script>
+</body>
+</html>
