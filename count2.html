@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../Chapter1/style.css"> 
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+	<h2>데이터를 있는 그대로 예제 </h2>
+	<div id="app">
+		<p> {{ myMy }}</p>
+		<p> {{ ManuelBbang }}</p>
+	</div>
+
+	<script>
+		new Vue({                 //Vue 하나를 만들어서 다 넣어줌
+			el: '#app',  // 아이디라서 샵을 붙이고       //el: 아이디 or 클래스 입력
+			data: {
+				myMy: 'Hello!!!',         
+				ManuelBbang : '마늘 빵 맛있다'
+			}
+		})
+
+
+	</script>
+
+
+		
+</body>
+</html>

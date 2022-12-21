@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../Chapter1/style.css"> 
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+	<h2>데이터를 v-html로 ㅛ시</h2>
+	<div id="app">
+		<p> {{ myMy }} </p>        <!--//머쉬태스 -->
+		<p v-text="myMy"></p>			 <!--//v-text -->
+		<p v-html="myMy"></p>	 	   <!--//v-html -->
+	</div>
+	
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				myMy:'<h1>Hello</h>'     //v-html 하면 자바스크립트 태그 사용 가능
+			}
+		})
+
+
+	</script>
+
+</body>
+</html>

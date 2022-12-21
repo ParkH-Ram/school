@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link ref="stylesheet" href="../Chapter1/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+	<h2>여러가지 데이터 테스트</h2>
+	<div id="app">
+		<p>{{myNuer}}</p>
+		<p>{{myxt}}</p>
+		<p>{{Bool}}</p>
+
+	</div>
+	
+	<script>
+		new Vue ({
+			el: "#app",
+			data:{
+				myNuer: 123456,
+				myxt: ' 허허',
+				Bool: true
+			}
+		})
+
+	</script>
+
+</body>
+</html>

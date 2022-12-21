@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../Chapter1/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+	<h2> 클릭하면 카운터가 올라 갑니다. </h2>
+	<div id ="app">
+		<p>	{{count}}회 </p>    
+		<!-- 머스테쳐 mustache -->
+		<button v-on:click="countUp"> 카운터 업</button>
+		<button v-on:click="countDown"> 카운터 다운</button>
+		</div>
+
+		<script>
+			new Vue ({
+				el: "#app",
+				data: {
+					count:0
+				},
+				methods:{ 
+					countUp: function(){
+						this.count++;
+					},
+					countDown: function(){
+						this.count--;
+					}
+				}
+				
+			})
+
+
+
+		</script>
+</body>
+</html>

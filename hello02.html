@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../Chapter1/style.css"> 
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+	<h2>데이터를 v-text로 표시하는 예제 </h2>
+	<div id="app">
+		<p v-text="myMy"></p>
+		<p v-text="myYou"></p>
+	</div>
+	<h2>데이터를 v-text로 표시하는 예제 </h2>
+	<div id="app2">
+		<p v-text="myMy2"></p>
+		<p v-text="myYou2"></p>
+	</div>
+	<script> 
+	new Vue({         //인스턴스 생성
+			el: '#app',
+			data: {
+				myMy:'마늘 빵 맛있음',
+				myYou: '배고픔'	
+		}
+	})
+	new Vue({         //인스턴스 생성 id 2개 만들거면 인스턴스 2개 생산
+			el: '#app2',
+			data: {
+				myMy2:'마늘 빵 맛없음',
+				myYou2: '배부름'	
+		}
+	})
+	
+	</script>
+
+		
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>오브젝트 데이터의 내부를 확인하는 예제</h2>
+		<div id="app">
+			{{ $data }}
+			<hr>
+			<li v-for="(sk, hello) in $data">{{ hello }} : {{ sk }}</li>    
+			<!---v for 반복?in이라고 하는거는 하나하나씩 데이터를 잡아 넣어서 실행을 한다는 걸로 보면 됨
+			출력할 부분 지정   키는 중복 x value 는 중복 가능 = 맵 자료 구조
+			-->
+		</div>
+
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					myText: 'hello',
+					myNumber: 0105629,
+					myBool: true,
+					myArray:[1,2,3,4,5]
+				}
+			})
+		</script>
+	</body>
+</html>

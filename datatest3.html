@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>배열로 값을 표시하는 예제</h2>
+		<div id="app">
+			<p>{{ Hello }}</p>					<!--배열 명--->
+			<p>{{ Hello[2] }}</p>      	<!--배열에 입력할 인덱스 값-->
+		</div>
+
+		<script>
+			new Vue({
+				el: "#app",
+				data: {
+					Hello: ['다즐링', '얼그레이','안녕','배고프네']  // 배열 안에 넣을 인덱스 내용
+
+				}
+
+
+			})
+
+
+
+
+
+		</script>
+
+
+
+	</body>
+</html>
