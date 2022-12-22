@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>이미지 출력을 라디오버튼으로 변경하는 예제</h2>
+		<div id="app">
+      <label><input type="radio" value="face1.png" v-model="fileName">그림1</label>
+      <label><input type="radio" value="face2.png" v-model="fileName">그림2</label>
+      <label><input type="radio" value="cute1.jpeg" v-model="fileName">고양이1</label>
+      <label><input type="radio" value="./image/cat2.jpeg" v-model="fileName">고양이2</label>
+      <p> {{ fileName }}  </p>
+      <img v-bind:src="fileName"></img>
+    </div>
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					fileName: ''
+				}
+			})
+		</script>
+
+	</body>
+</html>

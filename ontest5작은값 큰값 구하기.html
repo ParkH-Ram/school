@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>[Shift] + [Enter] 키를 누르면 얼럿을 표시하는 예제</h2>
+		<div id="app">
+			<input v-model.number="num1" >
+      <input v-on:keyup.enter="showAlert" v-model.number="num2">
+			<p>{{myText}}</p>
+			<p>{{myMin}}</p>
+
+
+		</div>
+
+		<script>
+			new Vue({
+				el : '#app',
+				data:{
+					myText: '',
+					myMin: ''
+				},
+				methods:{
+	       showAlert: function(){
+					if(this.num1>this.num2){
+						this.myText = this.num1; 
+						this.myMin = this.num2;}
+					else if(this.num1<this.num2){
+						this.myText = this.num2;
+						this.myMin = this.num1;}
+						alert("큰값은" + this.myText + "입니다.")
+						alert("작은값은" + this.myMin + "입니다.")
+					
+					}
+				
+				
+				 }
+
+
+
+
+
+			})
+			
+
+		</script>
+	</body>
+</html>

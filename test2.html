@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="style sheet" href="../Chapter1/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p> <a v-bind:href="naverLink">네이버로 연결</a></p>
+    <!--a를 넣으면 클릭 하게 만들어 줌-->
+    <p> <img v-bind:src="dlAlwl">face2.png 표시</img></p>
+    <p v-bind:align="right">텍스트 왼쪽 정렬</p>
+    <p v-bind:align="left">텍스트 오른쪽 정렬</p>
+    <p v-bind:align="center">텍스트 가운데 정렬</p>
+    <p>인라인 스타일로 글자색을 빨간색으로</p>
+    <p>인라인 스타일로 글자크기를 150% 크게 빨간색으로</p>
+    <p>인라인 스타일로 글자크기를 150%크게 빨간색으로 배경은 노란색으로</p>
+    <p v-bind:class="blue">blue-underline class 지정</p>
+    <p v-bind:class="st">blue-underline, strike-through class 지정 </p>
+  </div>
+    
+  <script>
+    new Vue({
+      el:'#app',
+      data:{
+        naverLink :  'https://naver.com/'  , 
+        dlAlwl:  '../Chapter3/face1.png',
+        right: 'right',
+        left: 'left',
+        center: 'center',
+        blue: 'blueblueunderunder',
+        st: 'strike-through'
+
+
+      }
+
+    })
+
+  </script>
+    
+
+</body>
+</html>

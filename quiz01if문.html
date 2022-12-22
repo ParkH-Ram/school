@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+    <h2>두수를 입력 받아 값 비교 </h2>
+    <div id="app">
+      <input v-model.number="myNumber1" type="number">
+      <input v-model.number="myNumber2" type="number">
+      <button v-on:click="hello">눌러보아</button>   
+      {{ hi }}        
+
+
+
+		</div>
+    
+		<script>
+     new Vue({             
+        el: '#app',
+        data: {
+          hi: '',
+					myNumber1:0,
+          myNumber2:0 
+        },
+        methods:{
+          hello : function(){
+          if (this.myNumber1>this.myNumber2) this.hi=this.myNumber1;
+          else if (this.myNumber1<this.myNumber2) this.hi=this.myNumber2;    //this가 업승면 안 됨
+          else this.hi = "같습니더";
+          }
+        }
+      
+        
+        
+      
+      })
+      
+			
+		</script>
+	</body>
+</html>

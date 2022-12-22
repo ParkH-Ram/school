@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>복수 체크박스의 ON을 배열로 만드는 예제</h2>
+      <div id="app">
+        <label><input type="checkbox" value="red" v-model="myChecks">적</label>
+        <label><input type="checkbox" value="green" v-model="myChecks">녹</label>
+        <label><input type="checkbox" value="blue" v-model="myChecks">청</label>
+        <!--- 체크박스 누르면 value 값 출력  -->
+        선택한 색은 {{ myChecks}}
+
+      </div>
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+          myChecks:[]         //배열로 만들겠다는 뜻
+          
+				}
+			})
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>[Enter] 키를 누르면 얼럿을 표시하는 예제</h2>
+		<div id="app">
+			<input v-on:keyup.enter="showAlert" v-model="myText">
+			<!---인풋에 있는 값을 데이터에 출력하는게 v-model-->
+			{{ myText }}
+		</div>
+
+		<script>
+			new Vue({
+				el:'#app',
+				data: {
+					myText: '반가워욥'
+				},
+				methods:{
+					showAlert: function(){
+						alert("Enter키를 눌렀어욥");
+						alert(this.myText );
+					
+					}
+				}
+				
+
+			})
+		</script>
+	</body>
+</html>

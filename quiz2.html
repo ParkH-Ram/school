@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+    <h2>두수를 입력 받아 값 비교 </h2>
+    <div id="app">
+      <p>이름 : <input v-model.text="name"></p>
+      <p>나이 : <input v-model.number="age"></p>
+      성별 : <label><input name="a" type="radio" value="남성"> 남성  </label>
+      <label><input name="a" type="radio" value="여성"> 여성  </label>    <!----name을 줘서 하나만 선택 가능하다고 알려주는것-->
+
+      <p>국가 :	<select v-model="country">
+				<option disabled value="">국가 선택하세욥</option>
+				<option>한국</option>
+				<option>한국</option>
+				<option>한국</option>
+				<option>국내</option>
+				<option>창원</option>
+        <option>창원</option> 
+       
+			</select></p>
+
+
+
+	
+		</div>
+    
+		<script>
+     new Vue({             
+        el: '#app',
+        data: {
+          hi: '',
+					name:'이름 입력하세요',
+          age:'나이 입력하세요',
+          gender: '',
+          hobby: [] ,    //배열로 지정
+          password: '',
+          country: ''
+          
+        }
+ 
+ 
+        
+        
+      
+      })
+      
+			
+		</script>
+	</body>
+</html>
