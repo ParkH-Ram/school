@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>true 일때만 표시하는 예제</h2>
+		<div id="app">  <!----체크 박스 체크 하면 글자 나옴-->
+      <!---else 일 때 체크 박스 off 표시 -->
+			<input v-model.number="num1" >       <!--모델로 연결 되어 있으니 값을 넣어주면 data랑 연결1-->
+      <input v-model.number="num2">
+			<button v-on:click="oneClick">값 비교</button>          <!---클릭을 하면 이 이름을 가진 함수 호출2-->
+			<p v-if="flag"> 큰값 : {{num1}} 작은값 : {{num2}}</p>      <!---값으로 알아서 반영-->
+			<p v-else> 작은값 : {{num1}} 큰값 : {{num2}}</p>
+
+
+			</div>
+		<script>
+
+
+			new Vue({
+				el:'#app',
+				data: {
+				  num1:'',
+					num2:'',
+					flag:true            
+				},
+				methods: {
+					oneClick: function(){                  // 숫자가 다 들어가 있으니 실행한 함수로 비교 
+						if(this.num1>this.num2) {            // 바꿔 주고 
+							this.flag=true;
+						}else {
+							this.flag=false;
+						}
+					}
+				}
+
+			})
+
+
+		</script>
+		
+	</body>
+</html>

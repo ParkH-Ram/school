@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>true 일때만 표시하는 예제</h2>
+		<div id="app">
+			<label><input type="checkbox" v-model="myVisible">표시 </label>  <!----체크 박스 체크 하면 글자 나옴-->
+			<p v-if="myVisible">체크박스 ON</p>   <!----v-if 활용-->
+			<p v-else>체크박스 off </p>        <!---else 일 때 체크 박스 off 표시-->
+ 
+
+		</div>
+
+		<script>
+			new Vue ({
+				el:'#app',
+				data:{
+					myVisible: false
+				}
+
+			})
+
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>true 일때만 표시하는 예제</h2>
+		<div id="app">  <!----체크 박스 체크 하면 글자 나옴-->
+      <!---else 일 때 체크 박스 off 표시 -->
+			<input v-model.number="num1" >
+      <input v-model.number="num2">
+      <p v-if="num1>num2">큰수 : {{num1}}  <br> 작은수 : {{num2}}</p>   <!----v-if 활용-->
+			<p v-else-if="num1<num2">작은수 : {{num1}}  <br> 큰수 : {{num2}} </p>  
+      <p v-else> 같습니다. </p>
+
+		</div>
+
+		<script>
+			new Vue ({
+				el:'#app',
+				data:{
+					myVisible: true,
+          num1:0,
+          num2:0,
+          text:''
+				},
+              
+
+			})
+
+		</script>
+		
+	</body>
+</html>
