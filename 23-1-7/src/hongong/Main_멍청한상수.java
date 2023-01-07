@@ -26,7 +26,7 @@ public class Main_멍청한상수 {
 		String value2 = new String(arr2re);
 		System.out.println(arr2re);
 	
-		}
+	
 		
 		
 	

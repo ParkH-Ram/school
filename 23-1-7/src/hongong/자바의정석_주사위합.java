@@ -13,23 +13,30 @@ public class 자바의정석_주사위합 {
 				dice2 = (int)(Math.random()*6)+1;
 				count[6]++;
 				
-				if(dice1==1) count[0]++;
-				if(dice2==1) count[0]++;
-
-				if(dice1==2) count[1]++;
-				if(dice2==2) count[1]++;
-
-				if(dice1==3) count[2]++;
-				if(dice2==3) count[2]++;
+				if(dice1==1 || dice2==1) count[0]++;				
+				if(dice1==2 || dice2==2) count[1]++;
+				if(dice1==3 || dice2==3) count[2]++;
+				if(dice1==4 || dice2==4) count[3]++;
+				if(dice1==5 || dice2==5) count[4]++;
+				if(dice1==6 || dice2==6) count[5]++;
 				
-				if(dice1==4) count[3]++;
-				if(dice2==4) count[3]++;
-				
-				if(dice1==5) count[4]++;
-				if(dice2==5) count[4]++;
-				
-				if(dice1==6) count[5]++;
-				if(dice2==6) count[5]++;
+//				if(dice1==1) count[0]++;
+//				if(dice2==1) count[0]++;
+//
+//				if(dice1==2) count[1]++;
+//				if(dice2==2) count[1]++;
+//
+//				if(dice1==3) count[2]++;
+//				if(dice2==3) count[2]++;
+//				
+//				if(dice1==4) count[3]++;
+//				if(dice2==4) count[3]++;
+//				
+//				if(dice1==5) count[4]++;
+//				if(dice2==5) count[4]++;
+//				
+//				if(dice1==6) count[5]++;
+//				if(dice2==6) count[5]++;
 				
 				if((dice1+dice2)==5) break;
 
