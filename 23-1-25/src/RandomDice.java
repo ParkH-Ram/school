@@ -23,9 +23,7 @@ public class RandomDice {
 		case 7: System.out.println("°æ¿ö´Ï");
 		break;
 		}
-		
-		
-		
+
 	}
 
 }
