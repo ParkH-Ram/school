@@ -1,5 +1,0 @@
-{"pno":1, "name":"상품1", "company":"그냥 회사", "price":1558}
-{"pno":2, "name":"상품2", "company":"그냥 회사", "price":13348}
-{"pno":3, "name":"상품3", "company":"그냥 회사", "price":14252}
-{"pno":4, "name":"상품4", "company":"그냥 회사", "price":1236}
-{"pno":5, "name":"상품5", "company":"그냥 회사", "price":63448}
