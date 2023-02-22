@@ -19,17 +19,17 @@ public class UserView {
 		//UsersTable()를 생성하자마자 . select()문을 호출
 		
 		
-		new UsersTable().select().forEach( cp -> {  //람다식 비교
-			System.out.println(cp);
-		}); // 회사 정보 하나씩 출력 
+		new UsersTable().select().forEach( us -> {  //람다식 비교
+			System.out.println(us);
+		}); // 회원 목록  하나씩 출력
 		
 		
 		
 		
 		//  ----- delete 메서드 출력
 		// 삭제 할 때 딜리트 값을 보여 주기 위해
-		new UsersTable().select().forEach( cp -> {  //람다식 비교
-			System.out.println(cp.getUserName() + " 회원 명 : " + cp.getUserId());
+		new UsersTable().select().forEach( us -> {  //람다식 비교
+			System.out.println(us.getUserName() + " 회원 명 : " + us.getUserId());
 		});
 		
 		System.out.println("삭제할 회원 아이디를 입력하세요");
@@ -37,10 +37,14 @@ public class UserView {
 		// 유저 테이블을 호출하고 딜리트를 바로 실행 
 		
 		// 딜리트 하고 딜리트 값 확인까지 
-		new UsersTable().select().forEach( cp -> {  //람다식 비교
-			System.out.println(cp.getUserName() + " 회원 명 : "  + cp.getUserId());
+		new UsersTable().select().forEach( us -> {  //람다식 비교
+			System.out.println("삭제 후 " + us.getUserName() + " "  + us.getUserId());
 		});
 	
+		
+		
+		
+		System.out.println("insert 할 user 입력");
 	
 		String one = hi.nextLine();
 		String two = hi.nextLine();
@@ -51,6 +55,8 @@ public class UserView {
 		
 		new UsersTable().insert(us); // 각 값을 받아서 바로 삽입
 		System.out.println("insert" + us);
+		
+		
 		
 		one = hi.nextLine();
 		two = hi.nextLine();
