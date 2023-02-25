@@ -1,5 +1,8 @@
 rollback;
 
+create database foxy;
+use foxy; 
+
 drop table CompanyTable;
 drop table users;
 drop table stockHolding;    -- 드랍할 1 번
