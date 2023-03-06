@@ -3,14 +3,17 @@
 <web-app>
 
 	<security-role>
+		<description></description>
 		<role-name>role1</role-name>
 	</security-role>
 
 	<!-- 시큐리티 제약 사항 설정 -->
 	<security-constraint>
+		<display-name>WebMarket Security</display-name>
 		<web-resource-collection> <!-- 웹에 대한 접근 제한을 설정 하는 요소-->
-			<web-resource-name>JSPbook</web-resource-name> <!-- 웹 자원의 이름 설정 -->
-			<url-pattern>/ch10/security01.jsp</url-pattern> <!-- 접근을 제한할 url -->
+			<display-name>WebMarket Security</display-name>
+			<web-resource-name>jspBook</web-resource-name> <!-- 웹 자원의 이름 설정 -->
+			<url-pattern>/ch10/security02.jsp</url-pattern> <!-- 접근을 제한할 url -->
 			<http-method>GET</http-method> <!-- http 메소드 설정 | GET or POST -->
 		</web-resource-collection>
 		
@@ -22,7 +25,7 @@
 
 	<!-- 시큐리티 인증 설정 -->
 	<login-config>
-		<auth-method>FROM</auth-method> <!-- 웹 자원에 대한 인증 처리 방식 -->
+		<auth-method>FORM</auth-method> <!-- 웹 자원에 대한 인증 처리 방식 -->
 		<form-login-config>
 			<form-login-page>/ch10/login.jsp</form-login-page>
 			<form-error-page>/ch10/login_failed.jsp</form-error-page>
